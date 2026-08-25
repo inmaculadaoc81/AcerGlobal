@@ -7,7 +7,7 @@ module.exports=async(req,res)=>{
     const keys=["SMTP_HOST","SMTP_PORT","SMTP_SECURE","SMTP_USER","SMTP_PASS","CONTACT_EMAIL"];
     return res.status(200).json({
       ok:true,
-      service:"AcerTech contacto API",
+      service:"GlobalAcer contacto API",
       environment:Object.fromEntries(keys.map(k=>[k,Boolean(process.env[k])]))
     });
   }
@@ -52,11 +52,11 @@ module.exports=async(req,res)=>{
     await transporter.verify();
 
     await transporter.sendMail({
-      from:`"AcerTech" <${process.env.SMTP_USER}>`,
+      from:`"GlobalAcer" <${process.env.SMTP_USER}>`,
       to:process.env.CONTACT_EMAIL||process.env.SMTP_USER,
       replyTo:email,
-      subject:"Nueva consulta AcerTech - reparaciondeportatilesmadrid.com.es",
-      text:`Nueva consulta AcerTech
+      subject:"Nueva consulta GlobalAcer - globalacer.com.es",
+      text:`Nueva consulta GlobalAcer
 
 Nombre: ${nombre}
 Teléfono: ${telefono}
@@ -70,7 +70,7 @@ ${mensaje}`
     return res.status(200).json({ok:true});
 
   }catch(error){
-    console.error("AcerTech SMTP error",{
+    console.error("GlobalAcer SMTP error",{
       message:error?.message,
       code:error?.code,
       response:error?.response,
