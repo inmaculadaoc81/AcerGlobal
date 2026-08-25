@@ -1,1 +1,11 @@
-{"name":"globalacer-web","version":"1.0.0","private":true,"type":"module","dependencies":{"@vercel/functions":"^2.0.3"}}
+{
+  "name": "acertech-onepage",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "22.x"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.16"
+  }
+}
