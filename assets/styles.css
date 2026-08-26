@@ -24,7 +24,7 @@ a{text-decoration:none;color:inherit}
 .links{display:flex;gap:16px;align-items:center;color:#fff;font-size:13px;font-weight:850}
 .links a{white-space:nowrap}
 .links a:hover{color:#9dcbf0}
-.navcall{padding:11px 16px;border-radius:999px;background:#fff;color:#123a63!important}
+.navcall{padding:11px 16px;border-radius:999px;background:#fff;color:#123a63!important;white-space:nowrap}
 .menu-btn{display:none;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;border-radius:11px;padding:10px 14px;font-weight:900;font:inherit;cursor:pointer}
 
 /* Hero */
@@ -62,7 +62,7 @@ a{text-decoration:none;color:inherit}
 .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.18fr .82fr;gap:54px;align-items:start}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--blue);font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
 .eyebrow::before{content:"";width:34px;height:4px;background:var(--blue);border-radius:999px}
-h1{font-size:clamp(38px,4.4vw,58px);line-height:1.02;letter-spacing:-2.25px;margin:0 0 24px;max-width:810px;overflow-wrap:break-word}
+h1{font-size:clamp(46px,5.6vw,74px);line-height:1.03;letter-spacing:-2.4px;margin:0 0 24px;max-width:810px;overflow-wrap:break-word}
 .accent{color:var(--blue)}
 .ctas{display:grid;grid-template-columns:1.18fr .82fr;gap:11px;max-width:790px;margin-top:25px}
 .cta{min-height:62px;display:flex;align-items:center;justify-content:center;text-align:center;padding:13px 17px;border-radius:16px;font-weight:900}
@@ -176,7 +176,7 @@ footer{background:#123a63;color:#fff;padding:34px 0}
 @media(max-width:600px){
   .wrap{width:min(100% - 28px,1180px)}
   .hero{padding-top:46px}
-  h1{font-size:40px;letter-spacing:-1.5px}
+  h1{font-size:48px;letter-spacing:-1.5px}
   .problem-grid,.steps-grid,.ctas,form{grid-template-columns:1fr}
   .phone,.full{grid-column:auto}
   .hero::after,.hero-chip{display:none}

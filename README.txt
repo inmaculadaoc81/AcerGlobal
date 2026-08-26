@@ -39,4 +39,37 @@ CONTACT_EMAIL=soporte@kelatos.com
 
 El correo no aparece visible en la web; solo se utiliza en /api/contacto.
 
-No se proporcionó Google Analytics para esta web.
+Google Analytics:
+G-6LJRCVWEGY
+
+HISTORIAL: el repositorio era multipágina (14 páginas /servicios/ de
+averías Acer) y se convirtió a one-page; esas páginas fueron
+eliminadas en commits anteriores. Un commit previo ("REDIRECT1") ya
+había añadido un middleware.mjs y la dependencia @vercel/functions,
+pero ambos se perdieron en un commit posterior ("GlobalAcerONE") que
+reconstruyó el proyecto. Como las páginas antiguas ya no existen en
+el sitemap actual, se ha vuelto a añadir middleware.mjs para
+redirigir (301) cualquier URL antigua a la home, evitando 404 en
+enlaces indexados o backlinks antiguos. Excluye /api/* y cualquier
+ruta con extensión de archivo. Re-añadida también la dependencia
+"@vercel/functions": "^2.0.3" en package.json.
+
+REVISIÓN (fixes aplicados en esta pasada):
+- Ya estaba bien: banner de cookies, schema.org (ya usaba
+  correctamente el teléfono de la caja de información,
+  +34 910 05 40 41, no el de los botones), sección SEO, menú móvil,
+  borde blanco del chat, api/contacto.js con SMTP + nodemailer. No se
+  ha modificado ninguno de estos, ni ninguno de los dos números de
+  teléfono.
+- Google Analytics: no existía. Añadido G-6LJRCVWEGY.
+- Meta robots: no existía. Añadido.
+- .navcall: el texto largo ("Atención Telefónica 24 horas 365 días")
+  deformaba la píldora del menú. Acortado a solo el número (mismo
+  número de los botones, +34 914 46 85 03) y añadido
+  white-space:nowrap como salvaguarda.
+- H1 de portada reescrito, corto, directo y totalmente afirmativo
+  (sin interrogación ni condicionales, el anterior tenía 19
+  palabras), incluye la marca, redacción distinta a la de AcerTech:
+  "Tu Acer no responde. Aquí lo diagnosticamos sin rodeos." Tamaño
+  del H1 aumentado: clamp(38-58px) → clamp(46-74px) en escritorio,
+  40px → 48px en móvil.
