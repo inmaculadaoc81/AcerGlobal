@@ -79,4 +79,31 @@ REVISIÓN ADICIONAL (a petición del cliente, regla general de la familia):
   .hero-tag) que sobresalía y se solapaba visualmente con la caja de
   información en anchos de tablet/escritorio medio (detectado con
   captura en vivo en AcerTech). Regla para toda la familia: no volver
-  a añadir este tipo de elemento decorativo.
+  a añadir este tipo de elemento decorativo. (La regla CSS .hero-chip
+  se deja intacta, sin uso, según práctica habitual de la familia.)
+
+REVISIÓN ADICIONAL (checklist unificado de la familia, a petición del cliente):
+- H1 verificado: "Tu Acer no responde. Aquí lo diagnosticamos sin
+  rodeos." ya es afirmativo, corto e incluye la marca, con estructura
+  distinta a la del repo hermano AcerTech (imperativa: "Repara tu Acer
+  con diagnóstico claro y rápido."). No se ha tocado.
+- BUG REAL — dos textos decorativos gigantes sin ninguna reducción de
+  tamaño en tablet/móvil: ".problems::after" ("ACER", 180px) y
+  ".hardware-art::before" ("HARDWARE", 82px), mismo bug ya corregido
+  en AcerTech (plantilla compartida). Añadida reducción en tablet
+  (100px/52px) y móvil (56px/36px). El ticker ".hero::after" ya se
+  ocultaba correctamente en móvil, no se ha tocado.
+- BUG REAL — el botón CTA de teléfono no tenía icono, a diferencia del
+  de WhatsApp. Añadido (verificado con cuidado el cierre de las
+  etiquetas </a>: 20 aperturas / 20 cierres).
+- La casilla de política de privacidad existía pero el texto no
+  enlazaba a ningún sitio. Añadido el enlace estándar de la familia a
+  https://kelatos.com/privacy-policy/, resaltado en azul.
+- Añadida franja de aviso de servicio técnico independiente debajo del
+  menú (no existía). Verificado antes que .header no usa
+  display:flex directamente.
+- Añadido "Sábados, domingos y días festivos estamos cerrados" debajo
+  del horario.
+- Verificado: schema.org ya usaba correctamente el teléfono de la caja
+  de información (+34 910 05 40 41); formulario correctamente
+  conectado a /api/contacto.
